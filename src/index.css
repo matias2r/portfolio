@@ -1,0 +1,59 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffe066;
+}
+/* index.css vacío para evitar conflictos de estilos globales. Usar solo Tailwind CSS. */
+
+
+::selection {
+  background: #ffe066;
+  color: #222;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+svg {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
