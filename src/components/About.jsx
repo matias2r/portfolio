@@ -1,4 +1,5 @@
 import React from 'react';
+// ...existing code...
 import { useState } from 'react';
 
 export default function About() {
@@ -12,8 +13,8 @@ export default function About() {
         let c = 0;
         const interval = setInterval(() => {
           if (w < 5) setWebs(++w);
-          if (c < 8) setClientes(++c);
-          if (w >= 5 && c >= 8) clearInterval(interval);
+          if (c < 5) setClientes(++c);
+          if (w >= 5 && c >= 5) clearInterval(interval);
         }, 200);
         return () => clearInterval(interval);
       }, []);
@@ -33,23 +34,18 @@ export default function About() {
             <div className="bg-white border-4 border-black rounded-xl p-8 flex flex-col justify-between h-full shadow-lg hover:scale-105 transition-transform">
               <div className="flex items-center gap-2 text-yellow-500 font-extrabold text-lg"><span>●</span> Investigación de usuarios</div>
               <div className="text-gray-700 text-base font-semibold">Descubro lo que tus clientes realmente necesitan para crear soluciones efectivas y atractivas.</div>
-              <button className="mt-2 border-2 border-black rounded px-4 py-2 text-base font-bold hover:bg-black hover:text-white transition">Saber más</button>
-            </div>
+              </div>
             <div className="bg-white border-4 border-black rounded-xl p-8 flex flex-col justify-between h-full shadow-lg hover:scale-105 transition-transform">
               <div className="flex items-center gap-2 text-purple-500 font-extrabold text-lg"><span>●</span> Wireframing y prototipos</div>
               <div className="text-gray-700 text-base font-semibold">Diseño la estructura y experiencia de tu web antes de desarrollarla, asegurando claridad y funcionalidad.</div>
-              <button className="mt-2 border-2 border-black rounded px-4 py-2 text-base font-bold hover:bg-black hover:text-white transition">Saber más</button>
-            </div>
+              </div>
             <div className="bg-white border-4 border-black rounded-xl p-8 flex flex-col justify-between h-full shadow-lg hover:scale-105 transition-transform">
               <div className="flex items-center gap-2 text-red-500 font-extrabold text-lg"><span>●</span> Diseño UI/UX personalizado</div>
               <div className="text-gray-700 text-base font-semibold">Creo interfaces modernas, intuitivas y visualmente impactantes que conectan con tu audiencia.</div>
-              <button className="mt-2 border-2 border-black rounded px-4 py-2 text-base font-bold hover:bg-black hover:text-white transition">Saber más</button>
-            </div>
+              </div>
             <div className="bg-white border-4 border-black rounded-xl p-8 flex flex-col justify-between h-full shadow-lg hover:scale-105 transition-transform">
               <div className="flex items-center gap-2 text-blue-500 font-extrabold text-lg"><span>●</span> Desarrollo web profesional</div>
-              <div className="text-gray-700 text-base font-semibold">Construyo sitios rápidos, seguros y adaptados a cualquier dispositivo, listos para crecer con tu negocio.</div>
-              <button className="mt-2 border-2 border-black rounded px-4 py-2 text-base font-bold hover:bg-black hover:text-white transition">Saber más</button>
-            </div>
+              <div className="text-gray-700 text-base font-semibold">Construyo sitios rápidos, seguros y adaptados a cualquier dispositivo, listos para crecer con tu negocio.</div>            </div>
           </div>
         </div>
       </section>

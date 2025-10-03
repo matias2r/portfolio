@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// ...existing code...
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import PortfolioSection from './components/PortfolioSection.jsx'
@@ -57,23 +59,24 @@ function App() {
 
 
   return (
-    <main className="min-h-screen bg-[#f8f6f0] text-gray-900 font-sans">
-      {/* Sección de Navbar */}
-      <Navbar />
-      {/* Sección de About y Hero */}
-      <Hero webs={5} clientes={8} />
-      {/* Sección de tecnologías */}
-      <TechMarquee />
-      {/* Sección de About */}
-      <About />
-      {/* Sección de Portfolio */}
-      <PortfolioSection />
-      <Footer />
-      {/* Botón flotante para subir al top */}
-      {showTop && (
-        <TopButton onClick={handleScrollTop} />
-      )}
-    </main>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <main className="min-h-screen bg-[#f8f6f0] text-gray-900 font-sans">
+            <Navbar />
+            <Hero webs={5} clientes={8} />
+            <TechMarquee />
+            <About />
+            <PortfolioSection />
+            <Footer />
+            {showTop && (
+              <TopButton onClick={handleScrollTop} />
+            )}
+          </main>
+        } />
+  // ...existing code...
+      </Routes>
+    </Router>
   )
 }
 
